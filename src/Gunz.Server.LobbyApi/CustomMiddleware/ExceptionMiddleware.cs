@@ -1,11 +1,11 @@
-﻿using Gunz.Server.LobbyApi.CustomExceptions;
+﻿using Gunz.Server.Api.CustomExceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace Gunz.Server.LobbyApi.CustomMiddleware
+namespace Gunz.Server.Api.CustomMiddleware
 {
     public class ExceptionMiddleware
     {

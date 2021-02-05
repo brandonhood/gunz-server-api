@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Gunz.Server.LobbyApi.Controllers.Characters
+namespace Gunz.Server.Api.Controllers.Characters
 {
     [ApiController]
     public class CharactersController : GunzControllerBase

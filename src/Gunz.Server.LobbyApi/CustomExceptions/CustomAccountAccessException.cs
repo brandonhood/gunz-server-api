@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gunz.Server.LobbyApi.CustomExceptions
+namespace Gunz.Server.Api.CustomExceptions
 {
     public class CustomAccountAccessException : Exception
     {

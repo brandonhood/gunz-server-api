@@ -1,5 +1,5 @@
 using AutoMapper;
-using Gunz.Server.LobbyApi.CustomMiddleware;
+using Gunz.Server.Api.CustomMiddleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Reflection;
 
-namespace Gunz.Server.LobbyApi
+namespace Gunz.Server.Api
 {
     public class Startup
     {

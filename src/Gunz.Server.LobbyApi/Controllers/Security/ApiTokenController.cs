@@ -3,11 +3,10 @@ using Gunz.Server.Domain.Contracts.Security;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace Gunz.Server.LobbyApi.Controllers.Security
+namespace Gunz.Server.Api.Controllers.Security
 {
     [Route("api/apitoken")]
     public class ApiTokenController : ControllerBase

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 
-namespace Gunz.Server.LobbyApi.CustomFilters
+namespace Gunz.Server.Api.CustomFilters
 {
     public class BearerTokenFilter : Attribute, IAuthorizationFilter
     {

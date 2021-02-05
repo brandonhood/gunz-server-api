@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using Gunz.Server.LobbyApi.CustomExceptions;
-using Gunz.Server.LobbyApi.CustomFilters;
+using Gunz.Server.Api.CustomExceptions;
+using Gunz.Server.Api.CustomFilters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Net;
 
-namespace Gunz.Server.LobbyApi.Controllers
+namespace Gunz.Server.Api.Controllers
 {
     [BearerTokenFilter]
     public abstract class GunzControllerBase : ControllerBase

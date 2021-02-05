@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gunz.Server.Api", "Gunz.Server.LobbyApi\Gunz.Server.Api.csproj", "{42E50A95-2191-4E25-8935-01ADD6C179EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gunz.Server.Api", "Gunz.Server.Api\Gunz.Server.Api.csproj", "{42E50A95-2191-4E25-8935-01ADD6C179EC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gunz.Server.Domain", "Gunz.Server.Domain\Gunz.Server.Domain.csproj", "{1121BC90-F9C5-419C-9769-151DAB0B9E7F}"
 EndProject

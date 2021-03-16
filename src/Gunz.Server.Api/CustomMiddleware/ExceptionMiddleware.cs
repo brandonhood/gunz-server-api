@@ -1,4 +1,4 @@
-﻿using Gunz.Server.Api.CustomExceptions;
+﻿using Gunz.Server.Common.CustomExceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gunz.Server.Api.CustomMiddleware
 {
-    public class ExceptionMiddleware
+    internal class ExceptionMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionMiddleware> _logger;
@@ -23,11 +23,6 @@ namespace Gunz.Server.Api.CustomMiddleware
             try
             {
                 await _next(httpContext);
-            }
-            catch (CustomAccountAccessException ex)
-            {
-
-                
             }
             catch (Exception ex)
             {

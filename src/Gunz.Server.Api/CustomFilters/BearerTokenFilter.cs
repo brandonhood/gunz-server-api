@@ -1,4 +1,4 @@
-﻿using Gunz.Server.Api.CustomExceptions;
+﻿using Gunz.Server.Common.CustomExceptions;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 

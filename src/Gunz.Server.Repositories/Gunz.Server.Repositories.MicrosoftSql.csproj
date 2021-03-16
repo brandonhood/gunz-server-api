@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gunz.Server.Data\Gunz.Server.Data.csproj" />
+    <ProjectReference Include="..\Gunz.Server.Domain\Gunz.Server.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

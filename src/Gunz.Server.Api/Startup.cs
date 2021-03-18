@@ -6,6 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Reflection;
+using Autofac.Extensions.DependencyInjection;
+using Autofac;
+using Gunz.Server.Api.DependencyInjection;
 
 namespace Gunz.Server.Api
 {
@@ -32,7 +35,7 @@ namespace Gunz.Server.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -45,6 +48,11 @@ namespace Gunz.Server.Api
             {
                 endpoints.MapControllers();
             });
+        }
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule(new AutofacModule());
         }
     }
 }

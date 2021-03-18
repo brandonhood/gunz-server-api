@@ -1,17 +1,15 @@
 ﻿using Gunz.Server.Common.CustomExceptions;
 using Gunz.Server.Domain.Contracts.Security;
-using Gunz.Server.Repositories.Accounts;
 using System.Threading.Tasks;
 
 namespace Gunz.Server.Business.Accounts
 {
     internal class AccountManager : IAccountManager
     {
-        private readonly IAccountRepository _accountRepository;
+        //private readonly IAccountRepository _accountRepository;
 
-        public AccountManager(IAccountRepository accountRepository)
+        public AccountManager(/*IAccountRepository accountRepository*/)
         {
-            _accountRepository = accountRepository;
         }
 
         public async Task<ApiTokenResponse> GetApiTokenAsync(ApiTokenRequest request)

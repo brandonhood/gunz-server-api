@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Gunz.Server.Api.Controllers
 {
-    [BearerTokenFilter]
+    [TypeFilter(typeof(BearerTokenFilter))]
     public abstract class GunzControllerBase : ControllerBase
     {
-        protected RequestingAccountInfo GetRequestingAccountInfo() 
-            => new((int)HttpContext.Items["AccountId"]);
+        protected RequestingAccountInfo GetRequestingAccountInfo()
+            => (RequestingAccountInfo)HttpContext.Items["RequestingAccountInfo"];
     }
 }

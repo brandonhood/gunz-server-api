@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 
 namespace Gunz.Server.Domain.Contracts.Security
 {
@@ -6,9 +7,11 @@ namespace Gunz.Server.Domain.Contracts.Security
     public class ApiTokenRequest
     {
         [DataMember]
+        [Required]
         public string Username { get; set; }
 
         [DataMember]
+        [Required]
         public string Password { get; set; }
     }
 }

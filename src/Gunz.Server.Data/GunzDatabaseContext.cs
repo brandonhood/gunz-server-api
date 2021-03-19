@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Gunz.Server.Data
 {
-    public sealed class GunzDatabaseContext : DbContext
+    public sealed class GunzDatabaseContext : DbContext, IGunzDatabaseContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

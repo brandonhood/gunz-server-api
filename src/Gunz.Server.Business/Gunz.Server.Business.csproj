@@ -11,8 +11,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Gunz.Server.Common\Gunz.Server.Common.csproj" />
+    <ProjectReference Include="..\Gunz.Server.Data\Gunz.Server.Data.csproj" />
     <ProjectReference Include="..\Gunz.Server.Domain\Gunz.Server.Domain.csproj" />
-    <ProjectReference Include="..\Gunz.Server.Repositories\Gunz.Server.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,20 +1,24 @@
-﻿using Gunz.Server.Common.CustomExceptions;
+﻿using AutoMapper;
+using Gunz.Server.Common.CustomExceptions;
+using Gunz.Server.Data;
 using Gunz.Server.Domain.Contracts.Security;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 
 namespace Gunz.Server.Business.Accounts
 {
-    internal class AccountManager : IAccountManager
+    internal class AccountManager : ManagerBase, IAccountManager
     {
-        //private readonly IAccountRepository _accountRepository;
-
-        public AccountManager(/*IAccountRepository accountRepository*/)
+        public AccountManager(ILoggerFactory loggerFactory, IMapper mapper, IGunzDatabaseContextFactory gunzDatabaseContextFactory)
+            : base(loggerFactory.CreateLogger<AccountManager>(), mapper, gunzDatabaseContextFactory)
         {
         }
 
         public async Task<ApiTokenResponse> GetApiTokenAsync(ApiTokenRequest request)
         {
-            var match = await _accountRepository.GetAccountByCredentialsAsync(request.Username, request.Password) ??
+            await using var context = _gunzDatabaseContextFactory.CreateContext();
+            var match = await context.LoginInfos.FirstOrDefaultAsync(i => i.Username == request.Username && i.Password == request.Password) ??
                 throw new CustomAuthenticationException($"User failed to authenticate: {request.Username}");
 
             return new ApiTokenResponse()
